@@ -1,0 +1,12 @@
+Leader's Name: Hannes Leskelä
+Member2 Name: Ivan Liljeqvist
+Member3 Name: Sarah Berenji Ardestani
+
+Related paper:Bin Shao, Haixun Wang, Yanghua Xiao. "Managing and mining large graphs: systems and implementations".
+Immanuel Trummer et al. "Mining Subjective Properties on the Web".
+
+Abstract:
+Companies like Google, Facebook and Twitter all have a great need to keep track of their users and their different relationships. Graph databases have been developed especially with this in mind, since complex relationships are something that can be difficult to represent with standard SQL databases. 
+Several tools have been developed during the past few years to meet the demands of developers and data scientists when dealing with this task. Since the release in 2007, Neo4j has risen to become one of the most popular graph databases in the world, and is being incorporated in a lot of international companies.
+
+The aim of this project is to utilize Neo4j to represent different relationships found in a set of documents. Preferably, we will also do some more advanced analysis on the data in the form of a sentiment analysis to represent positive or negative relationships between the entities in the documents. Finally, we will use Linkurious to display the connections found to try and make previously hard-to-grasp data more clear and intuitive.
