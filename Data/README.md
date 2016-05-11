@@ -1,5 +1,5 @@
 The format of the data will be the following:
-id, subreddit_name, thread_name, username, comment
+id, subreddit_name, thread_name, thread_id, username, comment
 
 
 
