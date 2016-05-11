@@ -26,7 +26,7 @@ for subreddit in top_posts_per_subreddit:
 
         for comment in real_comments:
             user = comment.author
-            print(str(POST_ID) + "," + str(comment.subreddit.display_name) + ",\"" + str(thread.title).replace("\"","\"\"") + "\"," + str(user) + ",\""+ str(comment.body).replace("\"","\"\"")+ "\"")
+            print(str(POST_ID) + "," + str(comment.subreddit.display_name) + ",\"" + str(thread.title).replace("\"","\"\"") + "\"," +thread.id+ "," + str(user) + ",\""+ str(comment.body).replace("\"","\"\"")+ "\"")
             POST_ID = POST_ID+1
             i = i+1
 
