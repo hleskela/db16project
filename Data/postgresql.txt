@@ -9,6 +9,12 @@ Remember to strip csv_with_sentiment.csv so it doesn't have a header, postres do
 To get the weighted score of love from pics.
 SELECT SUM(love)/(SELECT COUNT(comment) as numcomments FROM comments WHERE subreddit='pics') as cnt FROM comments WHERE subreddit='pics';
 
+Complete query:
+SELECT SUM(love)/COUNT(comment) as love, SUM(fear)/COUNT(comment) as fear, SUM(scepticism)/COUNT(comment) as scepticism, SUM(negativity)/COUNT(comment) as negativity,
+SUM(desire)/COUNT(comment) as desire, SUM(hate)/COUNT(comment) as hate, SUM(violence)/COUNT(comment) as violence, SUM(positivity)/COUNT(comment) as positivity 
+FROM comments WHERE subreddit='pics;
+
+
 
 ISSUES!!!
 Different default setups for optimization out of the box, this will impact.
