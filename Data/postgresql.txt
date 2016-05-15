@@ -1,0 +1,15 @@
+CREATE TABLE comments
+(ID varchar, SUBREDDIT varchar, THREAD varchar, THREAD_ID varchar, USERNAME varchar, COMMENT varchar, SCEPTICISM double precision, LOVE double precision, NEGATIVITY double precision, FEAR double precision, DESIRE double precision,
+POSITIVITY double precision, HATE double precision, VIOLENCE double precision);
+
+COPY comments FROM './csv_with_sentiment.csv' DELIMITER ',' CSV;
+
+Remember to strip csv_with_sentiment.csv so it doesn't have a header, postres doesn't understand that per default. Also, let's change name to "comments_with_sentiment.csv" instead of csv redundance.
+
+To get the weighted score of love from pics.
+SELECT SUM(love)/(SELECT COUNT(comment) as numcomments FROM comments WHERE subreddit='pics') as cnt FROM comments WHERE subreddit='pics';
+
+
+ISSUES!!!
+Different default setups for optimization out of the box, this will impact.
+Different query formulation, i.e. how optimized are our queries? Are we writing smart cypher and stupid SQL?
